@@ -195,7 +195,6 @@ function validation()
 //////////////////////////////////
 
 
-
 function findCommon()
 {
     var array = [[1, 1, 9, 1, 0, 0, 2, 2],[23, 2, 2, 1, 100],[2, 7, 9, 1, 2, 3],[2, 9, 10, 1, 2], [2, 6, 2], [2, 2, 2, 2, 2]];
@@ -234,4 +233,59 @@ function findCommon()
         }
     }
     console.log(com);
+}
+
+// function convertAtoO()
+// {
+//     var arr = [
+//     {id:1,email:{email:'br@gmail.com,tj@gmail.com,b@gmail.com,zl@gmail.com'}},
+//     {id:2,email:{email:'by@gmail.com,tj@gmail.com,b@gmail.com,zi@gmail.com'}},
+//     {id:3,email:{email:'bs@gmail.com,tt@gmail.com,by@gmail.com,zg@gmail.com'}},
+//     {id:4,email:{email:'bd@gmail.com,tr@gmail.com,b@gmail.com,zh@gmail.com'}}
+//     ]
+//     var newary = [];
+//     var str = "";
+//     var temp = []
+//     var len = arr.length;
+//     for(let i = 0; i < len; i++)
+//     {
+//         str += arr[i].email.email + ",";
+//     }
+//     temp = str.split(",");
+
+//     let tlen = temp.length - 1;
+//     for(let i = 0; i < tlen; i++)
+//     {
+//         newary.push({id : i + 1, email : temp[i]});
+//     }
+
+//     // newary = arr.map()
+//     console.log(newary);
+// }
+
+function convertAtoO_2()
+{
+    var arr = [
+    {id:1,email:{email:'br@gmail.com,tj@gmail.com,b@gmail.com,zl@gmail.com'}},
+    {id:2,email:{email:'by@gmail.com,tj@gmail.com,b@gmail.com,zi@gmail.com'}},
+    {id:3,email:{email:'bs@gmail.com,tt@gmail.com,by@gmail.com,zg@gmail.com'}},
+    {id:4,email:{email:'bd@gmail.com,tr@gmail.com,b@gmail.com,zh@gmail.com'}}
+    ]
+    var newary = [];
+    var len = arr.length;
+    // debugger;
+    for(let i = 0; i < len; i++)
+    {
+        var subar = (arr[i].email.email).split(",");
+        let tlen = subar.length;
+        for(let j = 0; j < tlen; j++)
+        {
+            newary.push({id : i + 1, email : subar[i]});
+        }
+        arr[i].email.email = newary;
+        newary = [];
+    }
+
+    // newary = arr.map()
+    console.log(arr);
 }
