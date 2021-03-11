@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registraton Form</title>
+
+    <style>
+    .t1
+    {
+        display:block;
+        width:150px;
+        float:left;
+        margin-bottom:10px;
+    }
+
+    .war
+    {
+        font-weight: bold;
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <form id = "f1" onsubmit="return validation()">
+        <div>
+            <h2>Registration From</h2>
+        </div>
+        <div>
+            <label class = "t1">Full Name: </label>
+            <input id = "n1" class = "t1" type="text" name="fname" placeholder="Full name" required>
+            <br>
+            <span id = "w1" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Email ID: </label>
+            <input id = "e1" class = "t1" type="text" name="email" placeholder="Email" required>
+            <br>
+            <span id = "w2" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Password: </label>
+            <input id = "p1" class = "t1" type="password" name="pass" placeholder="Password" required>
+            <br>
+            <span id = "w3" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Re-enter Password: </label>
+            <input id = "p2" class = "t1" type="password" name="repass" placeholder="Re-enter Password" required>
+            <br>
+            <span id = "w4" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Phone: </label>
+            <input id = "ph1" class = "t1" type="text" name="phone" placeholder="Phone number" required>
+            <br>
+            <span id = "w5" class = "war" ></span>
+            <br><br>
+            <lable class = "t1">Select Course: </lable>
+            <select class = "t1">
+                <option value="short-courses">Short courses</option>
+                <option value="featured-courses">Featured courses</option>
+                <option value="course-type" selected>Course type*</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="diploma">Diploma</option>
+                <option value="certificate">Certificate</option>
+                <option value="masters-degree">Masters degree</option>
+                <option value="postgraduate">Postgraduate</option>
+            </select>
+            <br><br>
+        </div>
+        <input style="width: 100px;" type="submit"></inout>
+    </form>
+
+    <p id = "p1"></p>
+    <script src="Code.js"></script>
+</body>
+</html>
