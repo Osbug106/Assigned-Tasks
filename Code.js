@@ -267,25 +267,22 @@ function convertAtoO_2()
 {
     var arr = [
     {id:1,email:{email:'br@gmail.com,tj@gmail.com,b@gmail.com,zl@gmail.com'}},
-    {id:2,email:{email:'by@gmail.com,tj@gmail.com,b@gmail.com,zi@gmail.com'}},
-    {id:3,email:{email:'bs@gmail.com,tt@gmail.com,by@gmail.com,zg@gmail.com'}},
-    {id:4,email:{email:'bd@gmail.com,tr@gmail.com,b@gmail.com,zh@gmail.com'}}
+    {id:4,email:{email:'by@gmail.com,tj@gmail.com,b@gmail.com,zi@gmail.com'}},
+    {id:7,email:{email:'bs@gmail.com,tt@gmail.com,by@gmail.com,zg@gmail.com'}},
+    {id:9,email:{email:'bd@gmail.com,tr@gmail.com,b@gmail.com,zh@gmail.com'}}
     ]
     var newary = [];
     var len = arr.length;
-    // debugger;
     for(let i = 0; i < len; i++)
     {
         var subar = (arr[i].email.email).split(",");
         let tlen = subar.length;
         for(let j = 0; j < tlen; j++)
         {
-            newary.push({id : i + 1, email : subar[i]});
+            newary.push({id : j + 1, email : subar[j]});
         }
         arr[i].email.email = newary;
         newary = [];
     }
-
-    // newary = arr.map()
     console.log(arr);
 }
