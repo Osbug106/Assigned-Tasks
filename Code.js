@@ -272,17 +272,30 @@ function convertAtoO_2()
     {id:9,email:{email:'bd@gmail.com,tr@gmail.com,b@gmail.com,zh@gmail.com'}}
     ]
     var newary = [];
-    var len = arr.length;
-    for(let i = 0; i < len; i++)
-    {
-        var subar = (arr[i].email.email).split(",");
-        let tlen = subar.length;
+    // var len = arr.length;
+    // for(let i = 0; i < len; i++)
+    // {
+    //     var subar = (arr[i].email.email).split(",");
+    //     let tlen = subar.length;
+    //     for(let j = 0; j < tlen; j++)
+    //     {
+    //         newary.push({id : j + 1, email : subar[j]});
+    //     }
+    //     arr[i].email.email = newary;
+    //     newary = [];
+    // }
+
+    arr.forEach((value) => {
+        let array = [];
+        let temp = (value.email.email).split(",");
+        let tlen = temp.length;
         for(let j = 0; j < tlen; j++)
         {
-            newary.push({id : j + 1, email : subar[j]});
+            array.push({id : j+1, email : temp[j]});
         }
-        arr[i].email.email = newary;
-        newary = [];
-    }
+        value.email.email = array;
+    });
+
     console.log(arr);
 }
+convertAtoO_2();
