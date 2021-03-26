@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id = "form1" onsubmit="return validation('form1')">
+        <div><h2>Add Record</h2></div>
+        <div>
+            <label class = "t1">Full Name: </label>
+            <input id = "n1" class = "t1" type="text" name="fname" placeholder="Full name" required>
+            <br>
+            <span id = "w1" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Email ID: </label>
+            <input id = "e1" class = "t1" type="text" name="email" placeholder="Email" required>
+            <br>
+            <span id = "w2" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Phone: </label>
+            <input id = "ph1" class = "t1" type="text" name="phone" placeholder="Phone number" required>
+            <br>
+            <span id = "w5" class = "war" ></span>
+            <br><br>
+        </div>
+        <button style="width: 100px; background-color:gold;" type="button" onclick="insertRecord()">Add</button>
+    </form>
+
+    <form id = "form2" style="display: none;" onsubmit="return validation('form2')">
+        <div><h2>Edit Record</h2></div>
+        <div>
+            <label class = "t1">Full Name: </label>
+            <input id = "nf1" class = "t1" type="text" name="fname" placeholder="Full name" required>
+            <br>
+            <span id = "w1" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Email ID: </label>
+            <input id = "ef1" class = "t1" type="text" name="email" placeholder="Email" required>
+            <br>
+            <span id = "w2" class = "war" ></span>
+            <br><br>
+            <label class = "t1">Phone: </label>
+            <input id = "phf1" class = "t1" type="text" name="phone" placeholder="Phone number" required>
+            <br>
+            <span id = "w5" class = "war" ></span>
+            <br><br>
+        </div>
+        <button style="width: 100px; background-color:gold;" type="button" onclick="editRecord()">Edit</button>
+    </form>
+
+    <h2>Data</h2>
+    <table id = "table1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sheikh Muhammad Umar</td>
+                <td>sheikhomer98@gmail.com</td>
+                <td>03200499426</td>
+                <td>
+                    <button style="background-color:limegreen;" type="button" onclick="edit(this)">Edit</button>
+                    <button style="background-color:red;" type="button" onclick="deleteRecord(this)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id = "p1"></p>
+    <script src = "code.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

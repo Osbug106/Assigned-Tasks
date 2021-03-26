@@ -1,0 +1,14 @@
+{
+  "name": "current-weather-update",
+  "version": "1.0.0",
+  "description": "First live APi weather app.",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sh. M. Umar",
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}
